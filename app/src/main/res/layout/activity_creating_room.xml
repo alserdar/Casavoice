@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:background="@drawable/background_custom"
+    tools:context="alserdar.casavoice.CreatingRoom">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:gravity="top">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/create_room"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:src="@mipmap/my_icon"
+            android:id="@+id/setPicForRoom"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/set_picture"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/room_name"
+            android:textColor="@android:color/black"
+            android:background="@drawable/edit_text"
+            android:id="@+id/myRoomName"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:inputType="text"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/room_details"
+            android:textColor="@android:color/black"
+            android:background="@drawable/edit_text"
+            android:id="@+id/myRoomDetails"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/create"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button"
+            android:id="@+id/createMyRoomButton"
+            android:clickable="false"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

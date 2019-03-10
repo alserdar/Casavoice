@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:baselineAligned="false">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/adminUserPic"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/adminsDudes"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remove_admin"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:id="@+id/removeAdmin"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

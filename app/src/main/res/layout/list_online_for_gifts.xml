@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start|center"
+    android:baselineAligned="false"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onlineGuysInRichList"
+        android:gravity="center"
+        android:textColor="@color/ourLightBlue"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:textStyle="bold"
+        android:textSize="13sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onlineGuysRealUserNameInRichList"
+        android:visibility="gone"/>
+
+</LinearLayout>

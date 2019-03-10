@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ourBlue">#2196F3</color>
+    <color name="ourLightBlue">#03A9F4</color>
+    <color name="ourExLightBlue">#03AC99</color>
+    <color name="ourYellow">#ffd700</color>
+    <color name="ourSliver">#c0c0c0</color>
+    <color name="ourPronze">#cd7f32</color>
+    <color name="ourGreen">#00C853</color>
+    <color name="ourLightGreen">#00E676</color>
+    <color name="ourEXLightGreen">#69F0AE</color>
+    <color name="ourWhite">#ffffff</color>
+
+</resources>

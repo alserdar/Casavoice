@@ -1,0 +1,1989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="alserdar.casavoice.LiveRoom"
+    android:background="@mipmap/chat_room_back"
+    android:fillViewport="true"
+    android:fadeScrollbars="false"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="9.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:layout_margin="5dp"
+            android:weightSum="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                tools:ignore="NestedWeights,UselessParent"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_icon"
+                        android:id="@+id/profilePictureInsideRoom"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:gravity="start">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:maxLength="15"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:id="@+id/roomNameInsideRoom"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2.5"
+                            android:baselineAligned="false">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@mipmap/white_heart"
+                                    android:id="@+id/faveTheRoomButton"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <Button
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@mipmap/setting"
+                                    android:id="@+id/settingInsideRoom"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="start">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:gravity="center"
+                                android:id="@+id/roomIdInsideRoom"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:visibility="gone">
+
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/switchToRecord"
+                                app:trackTintMode="add"
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:gravity="center"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/mic_from_seif"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/firstMic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/mic_from_seif"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/secondMic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/mic_from_seif"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/thirdMic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/mic_from_seif"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/fourthMic"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/mic_from_seif"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/fivthMic"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center|start"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/megaphone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="650dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:id="@+id/roomBroadcast"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:clickable="false">
+
+
+            <com.devsmart.android.ui.HorizontalListView
+                android:id="@+id/hlistview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false">
+
+            </com.devsmart.android.ui.HorizontalListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="5"
+                android:visibility="gone"
+                android:background="@color/transparent"
+                android:id="@+id/introVipLay"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold"
+                    android:gravity="center"
+                    android:id="@+id/theVipNickName"
+                    android:background="@drawable/rooms"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="ContentDescription"
+                    android:id="@+id/introVipImage"
+                    android:src="@mipmap/vip_golden"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:id="@+id/richGiftLayout"
+                    android:visibility="gone"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="6"
+                        android:gravity="center"
+                        android:baselineAligned="false"
+                        tools:ignore="NestedWeights">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            tools:ignore="NestedWeights">
+
+                            <ListView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/edit_text"
+                                android:id="@+id/list_users_for_rich_gifts">
+
+                            </ListView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/edit_text"
+                                android:text="1"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:id="@+id/howManyRichGifts"
+                                android:maxLength="3"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="end|center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="ok"
+                                android:id="@+id/okSelectedWithRichOne"
+                                android:gravity="center"
+                                android:background="@drawable/oblong_draw_transparent"
+                                android:textColor="@android:color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        tools:ignore="NestedScrolling">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/ferrariLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/ferrari"
+                                        android:soundEffectsEnabled="true"
+                                        android:id="@+id/ferrari"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1000"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/re7aLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/re7a"
+                                        android:id="@+id/re7a"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="800"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/negmaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/ngma"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="60"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/bugattiLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/bugatti"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5000"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/farawlaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/farawla"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="600"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/coctailLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/coctail"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/camaroLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/camaro"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="4000"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/sabekaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/sabeka"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="700"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/gawharaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/gawhara"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="800"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/jeepLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/jeep"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2000"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/bosaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/bosa"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="100"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/wardaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/warda"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="6"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/yachLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/yacht"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2000"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/tagLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/tagg"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1200"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/iphoneLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/iphones"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="400"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/tortaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/torta"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="40"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/chocolataLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/chocalata"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="20"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="2"
+                    android:id="@+id/simpleGiftLayout"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:weightSum="6"
+                        android:gravity="center"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3">
+
+                            <ListView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/edit_text"
+                                android:id="@+id/list_users_for_simple_gifts"
+                                tools:ignore="NestedScrolling" >
+
+                            </ListView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/edit_text"
+                                android:text="1"
+                                android:gravity="center"
+                                android:maxLength="3"
+                                android:inputType="number">
+
+                            </EditText>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="end|center">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button"
+                                android:text="ok"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="NestedScrolling">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/bokehLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/bokeh"
+                                        android:soundEffectsEnabled="true" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="80"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/barChoclateLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/choclate"
+                                        />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="100"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/bikeLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/bike"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="40"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/confettiLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/confetti"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="100"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/cupcakeLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/cupcake"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/diamondLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/diamond"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="200"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/engagement_ringLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/engagment_ring"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="200"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/heartBallonLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/heart_ballon"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="40"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/lipstickLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/lipstick"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="100"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/goldRingLay">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/gold_ring"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="160"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/roseLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/rose"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="20"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/kharaLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/khara"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="6"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/threeBallonsLay">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/three_ballons"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="100"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/teddyLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/teddy"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="10"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/starTailLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/star_tail"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="40"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:weightSum="3"
+                                android:baselineAligned="false">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/scotterLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/scooter"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="20"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:id="@+id/coffeLay"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/coffee"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="6"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:drawableEnd="@mipmap/big_coins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="7"
+                    android:id="@+id/settingRoomLayout"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:baselineAligned="false"
+                        tools:ignore="NestedWeights">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="Admins"
+                                android:textSize="10sp"
+                                android:id="@+id/roomAdmins"
+                                tools:ignore="SmallSp" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="online"
+                                android:textSize="10sp"
+                                android:id="@+id/roomOnline"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="Edit Room"
+                                android:textSize="10sp"
+                                android:id="@+id/editRoom"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="Join"
+                                android:textSize="10sp"
+                                android:id="@+id/roomJoin"
+                                android:visibility="invisible"
+                                tools:ignore="SmallSp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="Block List"
+                                android:textSize="10sp"
+                                android:id="@+id/blockListButton"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:weightSum="4"
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="Report"
+                                android:textSize="10sp"
+                                android:id="@+id/roomReport"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="Exit"
+                                android:textSize="10sp"
+                                android:id="@+id/roomExit"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/list_of_messages"
+                        android:transcriptMode="alwaysScroll"
+                        android:stackFromBottom="true"
+                        tools:ignore="NestedScrolling">
+                    </ListView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:id="@+id/giftsLayout"
+                    android:visibility="gone">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/gift"
+                        android:id="@+id/simple_gift_box_button"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/gift_wedding"
+                        android:id="@+id/rich_gift_box_button"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/big_coins_2"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3.5"
+            android:gravity="center"
+            android:id="@+id/recordModelLayout"
+            android:visibility="gone"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center"
+                tools:ignore="NestedWeights"
+                android:visibility="gone">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/type"
+                    android:id="@+id/typeMode"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/record"
+                    android:id="@+id/record"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.4"
+                android:gravity="center">
+
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:id="@+id/progressRecord"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/sent"
+                    android:id="@+id/sendRecord"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3.5"
+            android:gravity="center"
+            android:id="@+id/typeModeLayout"
+            android:baselineAligned="false"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center"
+                tools:ignore="NestedWeights"
+                android:visibility="gone">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/mic"
+                    android:id="@+id/recordMode"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/gift"
+                    android:id="@+id/showUpGifts"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.4"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text"
+                    android:id="@+id/typeMessage"
+                    android:maxLength="200"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center">
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/sent"
+                    android:id="@+id/sendMessage"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    tools:context="alserdar.casavoice.fab_setting_classes.EarnGold"
+    android:background="@drawable/background_custom">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/share_facebook_100"
+            android:drawableRight="@mipmap/big_coins"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/ic_facebook_white_22dp"
+            android:drawableStart="@drawable/ic_facebook_white_22dp"
+            android:drawableEnd="@mipmap/big_coins" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/post_twitter_100"
+            android:drawableRight="@mipmap/big_coins"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:background="@drawable/button"
+            android:drawableLeft="@drawable/tw__ic_logo_default"
+            android:drawableEnd="@mipmap/big_coins"
+            android:drawableStart="@drawable/tw__ic_logo_default" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/watch_videos_50"
+            android:drawableRight="@mipmap/big_coins"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:background="@drawable/button"
+            android:drawableEnd="@mipmap/big_coins"
+            android:drawableLeft="@mipmap/youtube"
+            android:drawableStart="@mipmap/youtube"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

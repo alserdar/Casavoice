@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="alserdar.casavoice.login_package.RegisterForCasavoice"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/my_icon"
+            tools:ignore="ContentDescription"
+            android:id="@+id/regPic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_picture"
+            android:gravity="center"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:drawableStart="@android:drawable/ic_menu_edit" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="@string/nickname"
+            android:id="@+id/reg_username"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:inputType="text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/whichGenderIs"
+            android:textColor="@android:color/white"
+            android:text="@string/other"/>
+
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:text="@string/male"
+            android:id="@+id/reg_male"
+            android:drawableLeft="@mipmap/make"
+            android:drawableStart="@mipmap/make" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:text="@string/female"
+            android:id="@+id/reg_female"
+            android:drawableLeft="@mipmap/female"
+            android:drawableStart="@mipmap/female" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reg_birthday"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:drawableStart="@mipmap/age"
+            android:drawableLeft="@mipmap/age"
+            android:hint="@string/birth_date"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/def_reg_birthday"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="09/09/1989" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="@string/ok"
+            android:textColor="@android:color/white"
+            android:id="@+id/reg_save"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

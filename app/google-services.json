@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "63319760254",
+    "firebase_url": "https://casavoice-c9e99.firebaseio.com",
+    "project_id": "casavoice-c9e99",
+    "storage_bucket": "casavoice-c9e99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63319760254:android:c68174b3588d888f",
+        "android_client_info": {
+          "package_name": "alserdar.casavoice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63319760254-v19bg6077mnhjl9evhe1j1tvvk6dhqvq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alserdar.casavoice",
+            "certificate_hash": "87f7e6266e58ded624dccbeeb3ab292664a9941e"
+          }
+        },
+        {
+          "client_id": "63319760254-gujq4g6j5o7opaik4mn3n7vkgv90sd5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIX3wYRUgycBZSHeNlFRt3rfnfA3U0ni4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63319760254-gujq4g6j5o7opaik4mn3n7vkgv90sd5s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

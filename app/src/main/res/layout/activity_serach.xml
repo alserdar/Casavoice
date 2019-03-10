@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="@android:color/white"
+    tools:context="alserdar.casavoice.SearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:gravity="center"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text"
+                android:hint="@string/search_user_or_room_by_id"
+                android:padding="10dp"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@mipmap/search"
+                android:id="@+id/search_btn"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/resetLay"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetDaily"
+            android:text="Daily"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetWeekly"
+            android:text="Weekly"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetMonthly"
+            android:text="Monthly"/>
+    </LinearLayout>
+
+
+    
+
+    <ListView
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="visible"
+        android:id="@+id/aviLay">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AVLoadingIndicatorView.Large"
+            app:indicatorName="BallGridPulseIndicator"
+            app:indicatorColor="@color/ourBlue" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="alserdar.casavoice.Home">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profilePicForHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/my_icon"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/newNotification"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@mipmap/notifications"
+                tools:ignore="ContentDescription"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/newMessages"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@mipmap/dm_2"
+                tools:ignore="ContentDescription"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/newSpinno"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@mipmap/golds_pot"
+                tools:ignore="ContentDescription"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/userNameForHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="7"
+        android:background="@drawable/background_custom"
+        android:id="@+id/settingLayout"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end"
+                tools:ignore="NestedWeights">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/store"
+                    android:id="@+id/setting_store"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start">
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/dm_2"
+                    android:id="@+id/message" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end"
+                tools:ignore="NestedWeights">
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/golds_pot"
+                    android:id="@+id/earnGold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/new_user"
+                    android:id="@+id/setting_profile" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:visibility="visible">
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/search"
+                    android:id="@+id/searchUsers"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end"
+                tools:ignore="NestedWeights">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/notifications"
+                    android:id="@+id/setting_activity" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="start">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/settings_job"
+                    android:id="@+id/settings"
+                    android:soundEffectsEnabled="true"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabSetting"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|bottom"
+        app:srcCompat="@mipmap/setting"
+        android:soundEffectsEnabled="true"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/searchUsersFloatButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@mipmap/search"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>

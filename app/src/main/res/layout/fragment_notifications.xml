@@ -1,0 +1,25 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:gravity="center"
+    android:background="@drawable/background_custom"
+    tools:context="alserdar.casavoice.fab_setting_classes.ActivityAndNotifications$NotificationsTheTwo">
+
+  <ListView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/listNotifications"
+      android:transcriptMode="alwaysScroll"
+      android:stackFromBottom="false"
+      android:divider="@null">
+
+  </ListView>
+
+</LinearLayout>

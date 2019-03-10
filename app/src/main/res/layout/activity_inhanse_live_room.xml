@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_custom"
+    android:fadeScrollbars="false"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    tools:context="alserdar.casavoice.LiveRoom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="9.5"
+        android:layoutDirection="ltr"
+        tools:targetApi="jelly_bean_mr1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                tools:ignore="NestedWeights,UselessParent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5">
+
+                    <ImageView
+                        android:id="@+id/profilePictureInsideRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_icon"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.5"
+                            android:gravity="start">
+
+                            <TextView
+                                android:id="@+id/roomNameInsideRoom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:maxLength="15"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:baselineAligned="false"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="2.5">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <Button
+                                    android:id="@+id/settingInsideRoom"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@mipmap/setting"
+                                    />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="start">
+
+                            <TextView
+                                android:id="@+id/roomIdInsideRoom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@android:color/white" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:id="@+id/micLay">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4"
+                tools:ignore="NestedWeights">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/firstMic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/firstMicDisable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/firstMicMuted"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/block"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textMicOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/secondMic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/secondMicDisable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/secondMicMuted"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/block"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textMicTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/thirdMic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/thirdMicDisable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/thirdMicMuted"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/block"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textMicThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/fourthMic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/fourthMicDisable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/fourthMicMuted"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/block"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textMicFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/fivthMic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/fivthMicDisable"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/mic_from_seif"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/fivthMicMuted"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/block"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textMicFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center|start"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/megaphone"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/roomBroadcast"
+                    android:layout_width="650dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:baselineAligned="false"
+            android:clickable="false"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <com.devsmart.android.ui.HorizontalListView
+                android:id="@+id/hlistview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false">
+
+            </com.devsmart.android.ui.HorizontalListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="6"
+                android:gravity="center"
+                android:id="@+id/legClickLayout"
+                android:background="@drawable/edit_text"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/clickImage"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/clickName"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/clickId"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:background="@drawable/background_custom_angel">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:background="@mipmap/chat"
+                            android:id="@+id/clickChat"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:background="@mipmap/mic"
+                            android:id="@+id/clickMic"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:background="@mipmap/gift"
+                            android:id="@+id/clickGift"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:background="@mipmap/block"
+                            android:id="@+id/clickBlock"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/introVipLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/theVipNickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/rooms"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="italic|bold" />
+
+                <ImageView
+                    android:id="@+id/introVipImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/vip_golden"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:id="@+id/richGiftLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="6"
+                        tools:ignore="NestedWeights">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <ListView
+                                android:id="@+id/list_users_for_rich_gifts"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/edit_text"
+                                tools:ignore="NestedScrolling" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/howManyRichGifts"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/edit_text"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:text="@string/_1"
+                                tools:ignore="LabelFor" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="end|center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/okSelectedWithRichOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/oblong_draw_transparent"
+                                android:gravity="center"
+                                android:text="@string/ok"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:ignore="TooManyViews" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        tools:ignore="NestedScrolling">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/ferrariLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:id="@+id/ferrari"
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:soundEffectsEnabled="true"
+                                        android:src="@mipmap/ferrari"
+                                        tools:ignore="ContentDescription,TooDeepLayout" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_1000"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/re7aLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:id="@+id/re7a"
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/re7a"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_800"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/negmaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/ngma"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_60"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/bugattiLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/bugatti"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_5000"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/farawlaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/farawla"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_600"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/coctailLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/coctail"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_10"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/camaroLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/camaro"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_4000"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/sabekaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/sabeka"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_700"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/gawharaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/gawhara"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_800"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/jeepLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/jeep"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_2000"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/bosaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/bosa"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_100"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/wardaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/warda"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_6"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/yachLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/yacht"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_2000"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/tagLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/tagg"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_1200"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/iphoneLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/iphones"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_400"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:id="@+id/tortaLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/torta"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_40"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/chocolataLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <ImageView
+                                        android:layout_width="47dp"
+                                        android:layout_height="47dp"
+                                        android:src="@mipmap/chocalata"
+                                        tools:ignore="ContentDescription" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawableEnd="@mipmap/big_coins"
+                                        android:drawableRight="@mipmap/big_coins"
+                                        android:gravity="center"
+                                        android:text="@string/_20"
+                                        android:textColor="@android:color/holo_orange_light"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/settingRoomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:weightSum="7">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        tools:ignore="NestedWeights">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end">
+
+                            <Button
+                                android:id="@+id/roomAdmins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="@string/admins"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start">
+
+                            <Button
+                                android:id="@+id/roomOnline"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="@string/online"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/editRoom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="@string/edit_room"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/faveTheRoomButton"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="150px"
+                                android:layout_height="150px"
+                                android:background="@mipmap/white_heart" />
+
+                            <Button
+                                android:id="@+id/unfaveTheRoomButton"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="150px"
+                                android:layout_height="150px"
+                                android:background="@mipmap/heart"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/blockListButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="@string/block_list"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end">
+
+                            <Button
+                                android:id="@+id/roomReport"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="@string/report"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".25">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="start">
+
+                            <Button
+                                android:id="@+id/roomExit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/oblong_draw_snow"
+                                android:text="@string/exit"
+                                android:textSize="10sp"
+                                tools:ignore="SmallSp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5">
+
+                    <ListView
+                        android:id="@+id/list_of_messages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"
+                        android:stackFromBottom="true"
+                        android:transcriptMode="alwaysScroll"
+                        tools:ignore="NestedScrolling"></ListView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/typeModeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="3.5">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center"
+                tools:ignore="NestedWeights">
+
+                <Button
+                    android:id="@+id/showUpGifts"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:background="@mipmap/gift" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.4"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/typeMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/sendMessage"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:background="@mipmap/sent"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

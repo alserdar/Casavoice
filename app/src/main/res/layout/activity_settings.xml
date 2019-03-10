@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:weightSum="6"
+    android:background="@color/ourWhite"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    tools:context="alserdar.casavoice.fab_setting_classes.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advertising"
+            android:textColor="@color/wallet_link_text_light"
+            android:typeface="monospace"
+            android:autoSizeTextType="uniform"
+            android:id="@+id/ads"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourBlue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textColor="@color/wallet_link_text_light"
+            android:textSize="17sp"
+            android:typeface="monospace"
+            android:id="@+id/contactUs"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourBlue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textColor="@color/wallet_link_text_light"
+            android:textSize="17sp"
+            android:typeface="monospace"
+            android:id="@+id/privacy"
+            android:autoSizeTextType="uniform"
+            android:autoLink="web"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourBlue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:textColor="@color/wallet_link_text_light"
+            android:textSize="17sp"
+            android:typeface="monospace"
+            android:autoSizeTextType="uniform"
+            android:autoLink="web"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/terms"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourBlue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start|center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Casavoice"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:typeface="monospace"
+            android:autoSizeTextType="uniform" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Version 1.8"
+            android:textColor="@color/wallet_link_text_light"
+            android:textSize="12sp"
+            android:typeface="monospace"
+            android:id="@+id/aboutCasavoice"
+            android:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourBlue"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="start|bottom"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textColor="@android:color/white"
+            android:text="@string/log_out"
+            android:id="@+id/logOut"/>
+
+    </LinearLayout>
+
+</LinearLayout>

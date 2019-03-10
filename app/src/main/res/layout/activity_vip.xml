@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".store.VipActivity"
+    android:gravity="center"
+    android:weightSum="3.5"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:background="@drawable/background_custom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/legendaryLay"
+            tools:ignore="NestedWeights,UselessParent"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="Legendary"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:id="@+id/legendary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vip_diamond"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="49,999"
+                android:drawableRight="@mipmap/big_coins"
+                android:gravity="center"
+                android:id="@+id/legCash"
+                android:drawableEnd="@mipmap/big_coins" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourLightBlue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/royalLay"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="Royal"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:id="@+id/royal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vip_platinum"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="39,999"
+                android:drawableRight="@mipmap/big_coins"
+                android:gravity="center"
+                android:id="@+id/royalCash"
+                android:drawableEnd="@mipmap/big_coins" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="@color/ourLightBlue"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/goldenLay">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="Golden"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:id="@+id/golden"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vip_golden"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="29,999"
+                android:drawableRight="@mipmap/big_coins"
+                android:gravity="center"
+                android:id="@+id/goldenCash"
+                android:drawableEnd="@mipmap/big_coins" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourLightBlue"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/silverLay"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="Silver"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:id="@+id/silver"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vip_silver"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="19,999"
+                android:drawableRight="@mipmap/big_coins"
+                android:gravity="center"
+                android:id="@+id/silverCash"
+                android:drawableEnd="@mipmap/big_coins" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="@color/ourLightBlue"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/vipLay">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="VIP"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:id="@+id/vip"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/vip_pronze"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="4,999"
+                android:drawableRight="@mipmap/big_coins"
+                android:gravity="center"
+                android:id="@+id/vipCash"
+                android:drawableEnd="@mipmap/big_coins" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/ourLightBlue"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Ok"
+            android:id="@+id/okVIP"/>
+
+    </LinearLayout>
+
+</LinearLayout>

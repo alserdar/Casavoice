@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_custom"
+    android:weightSum="7"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="alserdar.casavoice.fab_setting_classes.spin_wheels.SpinWheels">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/play_with_casavoice"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:typeface="sans"
+            android:textColor="#F44339"
+            android:textStyle="italic|bold"
+            android:drawableEnd="@mipmap/dice"
+            android:drawableRight="@mipmap/dice"
+            android:drawableStart="@mipmap/dice"
+            android:drawableLeft="@mipmap/dice"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center">
+
+        <alserdar.casavoice.fab_setting_classes.spin_wheels.library.LuckyWheelView
+            android:layout_centerInParent="true"
+            app:lkwBackgroundColor="@color/ourGreen"
+            app:lkwTextColor="#263238"
+            app:lkwCenterImage="@drawable/wheel2"
+            app:lkwCursor="@mipmap/my_icon"
+            android:id="@+id/luckyWheel"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:ignore="NestedWeights,UselessParent">
+
+            <Button
+                android:id="@+id/spin"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="#F44339"
+                android:text="@string/free_spin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

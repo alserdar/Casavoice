@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    tools:context="alserdar.casavoice.room_settings_functions.EditMyRoom"
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:background="@drawable/background_custom"
+    android:gravity="center">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/changeRoomPicLay"
+        tools:ignore="UseCompoundDrawables">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/my_icon"
+            android:id="@+id/changeRoomPicImageView"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/change_room_picture"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:ignore="NestedWeights">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_room_name"
+                android:background="@drawable/edit_text"
+                android:id="@+id/changeRoomName"
+                android:textColor="@android:color/black"
+                android:maxLines="1"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_room_details"
+                android:background="@drawable/edit_text"
+                android:id="@+id/changeRoomDetails"
+                android:textColor="@android:color/black"
+                android:maxLines="1"
+                android:maxLength="20"
+                android:inputType="text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:baselineAligned="false">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:ignore="NestedWeights"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ourWhite"
+                    android:text="@string/up_the_room_100_happiness"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_50000"
+                    android:drawableEnd="@mipmap/big_coins"
+                    android:drawableRight="@mipmap/big_coins"
+                    android:background="@drawable/button"
+                    android:id="@+id/upTheRoomInside"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:ignore="NestedWeights"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:baselineAligned="false">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changeRoomID"
+                    android:textColor="@color/ourWhite"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/unlock_your_room"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_1000"
+                    android:background="@drawable/button"
+                    android:id="@+id/unlockYourRoom"
+                    android:textColor="@android:color/white"
+                    android:drawableEnd="@mipmap/big_coins"
+                    android:drawableRight="@mipmap/big_coins"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete_all_chat"
+                    android:textColor="@color/ourWhite"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_free"
+                    android:background="@drawable/button"
+                    android:id="@+id/deleteChat"
+                    android:textColor="@android:color/white"
+                    android:drawableEnd="@mipmap/big_coins"
+                    android:drawableRight="@mipmap/big_coins" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:background="@drawable/button"
+            android:id="@+id/saveYourRoomChanges"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

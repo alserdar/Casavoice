@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    tools:context="alserdar.casavoice.fab_setting_classes.ActivityActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="daily coins 500$"
+        android:id="@+id/dailyCoins"
+        android:background="@drawable/button"
+        android:drawableRight="@mipmap/big_coins"
+        android:drawableEnd="@mipmap/big_coins"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

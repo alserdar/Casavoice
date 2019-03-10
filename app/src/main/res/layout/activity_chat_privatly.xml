@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/appbar_padding_top"
+    android:paddingBottom="@dimen/appbar_padding_top"
+    android:paddingLeft="@dimen/appbar_padding_top"
+    android:paddingRight="@dimen/appbar_padding_top"
+    tools:context="alserdar.casavoice.fab_setting_classes.ChatPrivatly"
+    android:weightSum="5"
+    android:background="@drawable/background_custom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@drawable/button">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:id="@+id/whosChatPrivateChat"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@drawable/background_custom">
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listForPrivateChat"
+            android:transcriptMode="alwaysScroll"
+            android:stackFromBottom="true"
+            tools:ignore="NestedScrolling"
+            android:divider="@null">
+
+        </ListView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:gravity="center"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            tools:ignore="NestedWeights">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_text"
+                android:id="@+id/typeMessagePrivateChat" />
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight=".5"
+           android:gravity="center">
+
+           <Button
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:background="@mipmap/sent"
+               android:id="@+id/sentPrivteChat"/>
+       </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

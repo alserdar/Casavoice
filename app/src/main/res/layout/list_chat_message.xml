@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:weightSum="4"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:id="@+id/legLayout"
+        android:baselineAligned="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/legPPForChat"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/legUser"
+            android:gravity="start|center"
+            android:textColor="@android:color/holo_red_dark"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textSize="17sp"
+            android:focusable="true"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription"
+            android:src="@mipmap/vip_diamond"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:id="@+id/royalLayout"
+        android:baselineAligned="false"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/royalPPForChat"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/royalUser"
+            android:gravity="start|center"
+            android:textColor="@android:color/white"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textSize="17sp"
+            android:focusable="true"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription"
+            android:src="@mipmap/vip_platinum"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:id="@+id/goldenLayout"
+        android:baselineAligned="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goldenPPForChat"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goldenUser"
+            android:gravity="start|center"
+            android:textColor="@color/ourYellow"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textSize="17sp"
+            android:focusable="true"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription"
+            android:src="@mipmap/vip_golden"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:id="@+id/silverLayout"
+        android:baselineAligned="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/silverPPForChat"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/silverUser"
+            android:gravity="start|center"
+            android:textColor="@color/ourSliver"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textSize="17sp"
+            android:focusable="true"/>
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription"
+            android:src="@mipmap/vip_silver"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:id="@+id/pronzeLayout"
+        android:baselineAligned="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pronzePPForChat"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pronzeUser"
+            android:gravity="start|center"
+            android:textColor="@color/ourPronze"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textSize="17sp"
+            android:focusable="true"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription"
+            android:src="@mipmap/vip_pronze"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:id="@+id/UsernameLayout"
+        android:baselineAligned="false"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profilePicForChat"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_user"
+            android:gravity="start|center"
+            android:textColor="@android:color/black"
+            android:autoLink="web"
+            android:clickable="true"
+            android:linksClickable="true"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:textSize="17sp"
+            android:focusable="true"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:ignore="ContentDescription"
+            android:id="@+id/userVipPic"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:gravity="top"
+        android:baselineAligned="false"
+        android:visibility="visible"
+        android:id="@+id/typePost">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message_text"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/whatIsTheGift"
+                android:layout_gravity="top"
+                tools:ignore="ContentDescription"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/audioPost"
+        android:baselineAligned="false">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:gravity="center"
+            tools:ignore="NestedWeights,UseCompoundDrawables,UselessParent"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/play_message_audio"
+                    android:background="@mipmap/play"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/seek_bar_message_audio"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
